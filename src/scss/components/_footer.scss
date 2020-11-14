@@ -5,6 +5,16 @@
     padding-top: 120px;
     font-size: 24px;
     margin-bottom: 10px;
+    & a{
+      color: $white;
+      transition-property: color;
+      transition-duration: 0.3s;
+      text-transform: ease;
+      text-decoration: none;
+      &:hover{
+        color: $blue-violet;
+      }
+    }
   }
   &__subtitle {
     font-size: 16px;
