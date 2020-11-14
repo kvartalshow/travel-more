@@ -1,7 +1,12 @@
 //color
 
-//font
+$white: #ffffff;
+$blue-violet: #5474fd;
+$gray: #999999;
 
+//font
+$f-aleo: 'Aleo', serif;
+$f-Josefin: 'Josefin Sans', sans-serif;
 //font-size
 $base-font-size: 16px;
 @function calcRem($size) {
@@ -9,4 +14,10 @@ $base-font-size: 16px;
   @return #{$remSize}rem;
 }
 
-// $h90: calcRem(90px);
+$h48: calcRem(48px);
+$h36: calcRem(36px);
+$h24: calcRem(24px);
+$h22: calcRem(22px);
+$h20: calcRem(20px);
+$h16: calcRem(16px);
+$h14: calcRem(14px);

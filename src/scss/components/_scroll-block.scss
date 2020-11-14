@@ -1,0 +1,28 @@
+.scroll-block {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    animation-timing-function: ease;
+    animation-name: bounce-1;
+    @keyframes bounce-1 {
+      0% {
+        transform: translateY(5px);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(5px);
+      }
+    }
+  @include flex(center, center, column, nowrap);
+  &__title {
+    @include text($h14, 400, $white, $f-Josefin);
+    letter-spacing: 2.8px;
+  }
+  &__svg {
+    color: $white;
+    font-size: 35px;
+    transform: rotate(-90deg);
+  }
+}

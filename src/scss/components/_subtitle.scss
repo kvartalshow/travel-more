@@ -1,0 +1,4 @@
+.subtitle{
+    @include text($h20, 400, $white, $f-Josefin);
+    letter-spacing: 7.1px;
+}

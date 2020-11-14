@@ -1,0 +1,23 @@
+.nav{
+    background-color: $blue-violet;
+    &__inner{
+        @include flex(space-around, center, row, wrap);
+        max-width: 1770px;
+        min-height: 80px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__logo{
+        font-size: $h24;
+    }
+    &__menu{
+    }
+    &__item{
+        @include text($h14, 400, $white, $f-aleo);
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    &__item:not(:last-of-type){
+        margin-right: 42px;
+    }
+}   

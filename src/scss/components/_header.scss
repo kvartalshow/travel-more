@@ -1,0 +1,56 @@
+.header {
+  @include flex(center, center, column, nowrap);
+  @include size(100%, 100%);
+  background-image: url(./../assets/images/header-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  &__inner {
+    max-width: 1770px;
+    width: 100%;
+    padding: 265px 0 135px 0;
+  }
+  &__title {
+    margin-bottom: 15px;
+    @include media-d-m($screen-iphone-plus) {
+      @include text($h36, 700, $white, $f-Josefin);
+    }
+  }
+  &__subtitle {
+    margin-bottom: 50px;
+  }
+  &__search {
+    @include flex(center, center, row, nowrap);
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    @include media-d-m($screen-tablet) {
+      padding: 0 3%;
+      @include flex(center, center, column, nowrap);
+    }
+  }
+  &__input {
+    @include size(75%, 60px);
+    max-width: 500px;
+    text-align: center;
+    @include media-d-m($screen-tablet) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    &::placeholder {
+      @include text($h14, 400, $gray, $f-Josefin);
+      padding: 0 5px;
+      letter-spacing: 2.8px;
+    }
+  }
+  &__button {
+    min-width: 150px;
+    width: 25%;
+    border: 2px solid white;
+  }
+  &__button-svg {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}

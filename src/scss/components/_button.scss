@@ -1,0 +1,9 @@
+.button{
+    @include flex(center, center, row, nowrap);
+    @include text($h16, 400, $white, $f-aleo);
+    height: 60px;
+    background-color: $blue-violet;
+
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}

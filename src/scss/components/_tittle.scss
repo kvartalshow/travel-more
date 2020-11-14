@@ -1,0 +1,6 @@
+.title{
+    @include text($h48, 700, $white, $f-Josefin);
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    line-height: 26px;
+}
