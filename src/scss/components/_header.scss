@@ -7,9 +7,15 @@
   background-repeat: no-repeat;
   text-align: center;
   &__inner {
-    max-width: 1770px;
-    width: 100%;
+    @include max-width();
     padding: 265px 0 135px 0;
+    
+    @include media-d-m($screen-iphone-plus){
+      padding: 200px 0 135px 0;
+    }
+    @include media-d-m($screen-iphone-5){
+      padding: 100px 0 100px 0;
+    }
   }
   &__title {
     margin-bottom: 15px;
@@ -45,7 +51,6 @@
     }
   }
   &__button {
-    min-width: 150px;
     width: 25%;
     border: 2px solid white;
   }

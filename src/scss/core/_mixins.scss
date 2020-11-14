@@ -143,3 +143,8 @@ $screen-retina: 1660px;
   background-size: $cover ;
   background-repeat: $n-rep;
 }
+@mixin max-width($max-w: 1115px, $width-100p: 100%, $m0a: 0 auto,){
+  max-width: $max-w;
+  width: $width-100p;
+  margin: $m0a;
+}

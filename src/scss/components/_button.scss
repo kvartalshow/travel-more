@@ -1,9 +1,46 @@
-.button{
-    @include flex(center, center, row, nowrap);
-    @include text($h16, 400, $white, $f-aleo);
-    height: 60px;
-    background-color: $blue-violet;
+$style: button;
 
-    text-transform: uppercase;
-    letter-spacing: 1.4px;
+.#{$style} {
+  @include flex(center, center, row, nowrap);
+  @include text($h16, 400, $white, $f-aleo);
+  min-width: 225px;
+  height: 60px;
+  position: relative;
+  background-color: $blue-violet;
+
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  &__text{
+      z-index: 5;
+  }
+  &--hover{ 
+      overflow: hidden;
+    &::after {
+        @include position(-170px, 0, 0, -480px );
+        // @include position(-70px, 0, 0, -30px );
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      transition-property: top, left;
+      transition-duration: 0.5s;
+      text-transform: ease;
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background-color: darken($color: $blue-violet, $amount: 3%);
+    }
+    &:hover{
+        &::after {
+        @include position(-170px, 0, 0, 10px );
+          content: "";
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          background-color: darken($color: $blue-violet, $amount: 3%);
+        }
+      }
+  }
 }

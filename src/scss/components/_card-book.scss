@@ -1,0 +1,33 @@
+.card-book{
+    background-color:  transparentize($color: $card-bg, $amount: 0.1);
+    max-width: 540px;
+    padding: 50px 30px;
+    @include media-d-m($screen-desktop){
+        padding: 25px 15px;
+        text-align: center;
+    }
+    &__title{
+        @include text($h20, 400, $white, $f-Josefin);
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+    &__subtitle{
+        @include text($h20, 400, $white, $f-Josefin);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+    &__description{
+        @include text($h16, 400, $white, $f-Josefin);
+        line-height: 26px;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+    &__button{
+        text-transform: uppercase;
+        opacity: 1;
+        @include media-d-m($screen-desktop) {
+            width: 100%;
+          }
+    }
+}

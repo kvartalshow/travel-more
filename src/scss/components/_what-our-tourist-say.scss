@@ -1,0 +1,65 @@
+.what-our-tourist-say {
+  background-image: url(./../assets/images/what-our-tourist-say-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  &__inner {
+    @include max-width();
+    padding: 120px 3% 200px;
+    @include media-d-m($screen-desktop) {
+        padding: 60px 3% 100px;
+      }
+  }
+  &__title {
+    @include text($h36, 400, $white, $f-aleo);
+    margin-bottom: 94px;
+  }
+  &__img {
+    max-width: 445px;
+    width: 100%;
+  }
+  &__comment {
+    @include flex(flex-start, center, row, nowrap);
+    position: relative;
+    background-color: $comment-bg;
+    @include media-d-m($screen-desktop) {
+      @include flex(center, center, column, nowrap);
+      background-color: transparent;
+      max-width: 445px;
+      margin: 0 auto    ;
+    }
+  }
+  &__svg {
+    display: inline-block;
+    color: $blue-violet;
+  }
+  &__banner {
+    width: 100%;
+    text-align: left;
+    margin: 0 60px;
+    @include media-d-m($screen-desktop-large) {
+      margin: 0 50px;
+    }
+    @include media-d-m($screen-desktop) {
+      @include flex(center, center, column, nowrap);
+      background-color: $comment-bg;
+      padding: 0 30px;
+      text-align: center;
+    }
+  }
+  &__banner-inner {
+    @include flex(center, center, row, nowrap);
+  }
+  &__banner-title {
+    @include text($h20, 400, $white, $f-Josefin);
+    text-transform: uppercase;
+    margin-top: 28px;
+    margin-bottom: 25px;
+  }
+  &__banner-subtitle {
+    @include text($h14, 400, $white, $f-Josefin);
+    margin-bottom: 25px;
+    line-height: 26px;
+  }
+}

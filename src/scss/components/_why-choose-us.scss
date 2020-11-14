@@ -1,0 +1,67 @@
+.why-choose-us {
+  @include size(100%, 100%);
+  background-image: url(./../assets/images/why-choose-us.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  &__inner {
+    @include flex(space-between, center, row, nowrap);
+    @include max-width();
+    padding: 120px 3%;
+    @include media-d-m($screen-desktop) {
+      @include flex(center, center, column, nowrap);
+    }
+  }
+  &__banner {
+    @include flex(center, flex-start, column, nowrap);
+    max-width: 530px;
+    @include size(50%, 100%);
+    @include media-d-m($screen-desktop) {
+      @include flex(center, center, column, nowrap);
+      width: 100%;
+    }
+  }
+  &__title {
+    @include text($h36, 400, $white, $f-aleo);
+    margin-bottom: 52px;
+  }
+  &__subtitle {
+    @include text($h16, 400, $white, $f-Josefin);
+    text-align: left;
+    line-height: 26px;
+    margin-bottom: 36px;
+    @include media-d-m($screen-desktop) {
+      text-align: center;
+    }
+  }
+  &__subtitle:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  &__button {
+    padding: 0 38px;
+    @include media-d-m($screen-desktop) {
+      margin-bottom: 46px;
+      width: 100%;
+    }
+  }
+  &__gallery {
+    max-width: 475px;
+    @include media-d-m($screen-desktop) {
+      @include flex(center, center, column, nowrap);
+    }
+  }
+  &__img:nth-child(1) {
+    float: left;
+    margin-bottom: 5px;
+    @include media-d-m($screen-desktop) {
+      width: 100%;
+    }
+  }
+  &__img:nth-child(2) {
+    float: right;
+    @include media-d-m($screen-desktop) {
+      width: 100%;
+    }
+  }
+}
