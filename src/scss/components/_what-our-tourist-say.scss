@@ -14,6 +14,9 @@
   &__title {
     @include text($h36, 400, $white, $f-aleo);
     margin-bottom: 94px;
+    @include media-d-m($screen-desktop) {
+      margin-bottom: 54px;
+    }
   }
   &__img {
     max-width: 445px;
@@ -44,7 +47,7 @@
     @include media-d-m($screen-desktop) {
       @include flex(center, center, column, nowrap);
       background-color: $comment-bg;
-      padding: 0 30px;
+      padding: 0 15px;
       text-align: center;
     }
   }
@@ -56,10 +59,16 @@
     text-transform: uppercase;
     margin-top: 28px;
     margin-bottom: 25px;
+    @include media-d-m($screen-desktop) {
+      margin-top: 25px;
+    }
   }
   &__banner-subtitle {
     @include text($h14, 400, $white, $f-Josefin);
     margin-bottom: 25px;
     line-height: 26px;
+    @include media-d-m($screen-desktop) {
+      margin-bottom: 25px;
+    }
   }
 }

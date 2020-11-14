@@ -1,0 +1,36 @@
+.footer {
+  @include flex(center, center, column, nowrap);
+  background-color: $card-bg;
+  &__title {
+    padding-top: 120px;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    margin-bottom: 25px;
+  }
+  &__items {
+    @include flex(center, center, row, nowrap);
+    margin-bottom: 50px;
+  }
+  &__item {
+    color: white;
+    font-style: 24px;
+    cursor: pointer;
+    &:not(:last-of-type) {
+      margin-right: 28px;
+    }
+    & a:hover {
+      color: $blue-violet;
+    }
+    & a{
+        transition-property: color;
+        transition-duration: 0.3s;
+        text-transform: ease;
+        text-decoration: none;
+        color: white;
+    }
+  }
+}

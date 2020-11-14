@@ -7,6 +7,9 @@ $style: button;
   height: 60px;
   position: relative;
   background-color: $blue-violet;
+  @include media-d-m($screen-desktop){
+    min-width: 0px;
+  }
 
   text-transform: uppercase;
   letter-spacing: 1.4px;

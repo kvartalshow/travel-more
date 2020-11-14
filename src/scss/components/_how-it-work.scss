@@ -1,0 +1,51 @@
+.how-it-work{
+    background-color: $comment-bg;
+    &__inner{
+        @include max-width();
+        @include flex(center, center, column, nowrap);
+        padding: 66px 0 0 0 ;
+    }
+    &__line{
+        @include media-d-m($screen-desktop){
+           display: none;
+        }
+    }
+    &__items{
+        max-width: 800px;
+        width: 100%;
+        @include flex(space-between, center, row, nowrap);
+        margin-bottom: 50px;
+        @include media-d-m($screen-desktop){
+            @include flex(center, center, column, nowrap);
+         }
+    }
+    &__item{
+        @include size(100px, 100px);
+        @include flex(center, center, row, nowrap);
+        background-color: $comment-bg;
+        border-radius: 50%;
+        position: relative;
+        top: -80px;
+        right: -5px;
+        font-size: 58px;
+        &:nth-of-type(1){
+            color: $blue-violet;
+        }
+        &:nth-of-type(2){
+            color: $coral;
+        }
+        &:nth-of-type(3){
+            color: $blue;
+        }
+    }
+//     &__items-txt{
+//         @include flex(space-between, center, row, nowrap);
+//         position: absolute;
+//         width: 100%;
+//         max-width: 900px;
+        
+//     }
+//     &__item-txt{
+//         @include text($h36, 400, $white, $f-aleo);
+//     }
+}
