@@ -37,15 +37,26 @@
         &:nth-of-type(3){
             color: $blue;
         }
+        @include media-d-m($screen-desktop){
+            height: 150px;
+            top: -40px;
+            right: 0;
+         }
     }
-//     &__items-txt{
-//         @include flex(space-between, center, row, nowrap);
-//         position: absolute;
-//         width: 100%;
-//         max-width: 900px;
+    &__items-txt{
+        @include flex(space-between, center, row, nowrap);
+        position: absolute;
+        width: 100%;
+        max-height: 340px;
+        height: 100%;
+        max-width: 900px;
+        @include media-d-m($screen-desktop){
+            @include flex(space-between, center, column, nowrap);
+            
+         }
         
-//     }
-//     &__item-txt{
-//         @include text($h36, 400, $white, $f-aleo);
-//     }
+    }
+    &__item-txt{
+        @include text($h36, 400, $white, $f-aleo);
+    }
 }
