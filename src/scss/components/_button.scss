@@ -6,6 +6,7 @@ $style: button;
   min-width: 225px;
   height: 60px;
   position: relative;
+  cursor: pointer;
   background-color: $blue-violet;
   @include media-d-m($screen-desktop){
     min-width: 0px;
